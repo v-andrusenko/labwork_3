@@ -1,0 +1,36 @@
+﻿<Window x:Class="labwork_3_2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:labwork_3_2"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="Калькулятор" Height="450" Width="700" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
+    <Grid Background="#ffdadada" >
+        <Border Background="#fff" Margin="40" Padding="30" CornerRadius="20">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="30" Color="LightGray" ShadowDepth="0"/>
+            </Border.Effect>
+            <StackPanel>
+                <TextBlock HorizontalAlignment="Center" Text="Калькулятор" FontSize="30" FontWeight="Bold" Margin="0 0 0 5"/>
+                <WrapPanel HorizontalAlignment="Center">
+                    <TextBox x:Name="TextBoxFirstValue" Width="130" Margin ="0 0 0 20" FontSize="20" Padding="0,4,0,4" materialDesign:HintAssist.Hint="Первое число" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                    <TextBlock x:Name="TextBlockSign" Width="50" Margin ="0 20 0 20" FontSize="20" Padding="15 5 0 0" />
+                    <TextBox x:Name="TextBoxSecondValue" Width="130" Margin ="0 0 0 20" FontSize="20" Padding="0,4,0,4" materialDesign:HintAssist.Hint="Второе число" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                    <TextBlock Width="50" Margin ="0 20 0 20" FontSize="20" Padding="10 5 0 0" Text=" ="/>
+                    <TextBox x:Name="TextBoxResult" Width="180" Margin ="0 0 0 20" FontSize="20" TextWrapping="WrapWithOverflow" materialDesign:HintAssist.Hint="Результат" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+
+                </WrapPanel>
+                <WrapPanel HorizontalAlignment="Center">
+                    <Button Content="+" Margin ="0 0 20 20" Width="200" Height ="35" Click="Button_Add" FontSize="22"/>
+                    <Button Content="-" Margin ="0 0 0 20" Width="200" Height ="35" Click="Button_Subtract" FontSize="22"/>
+                    <Button Content="×" Margin ="0 0 20 20" Height ="35" Width="200" Click="Button_Multiply" FontSize="22"/>
+                    <Button Content="÷" Margin ="0,0,0,20" MinHeight ="35" MinWidth="200" Click="Button_Divide" FontSize="22"/>
+                    <Button Content="Очистить" Margin ="100,0,0,0" Height ="35" Width="200" Click="Button_Clear" FontSize="14"/>
+                </WrapPanel>
+                
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>
